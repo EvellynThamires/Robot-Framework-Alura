@@ -1,5 +1,8 @@
 *** Settings ***
-Library    SeleniumLibrary
+Library           SeleniumLibrary
+Resource          setup_teardown.robot
+Test Setup        Given I access the Organo website
+Test Teardown     Close the Browser
 
 *** Variables ***
 ${name_field}            id:form-nome
@@ -17,23 +20,21 @@ ${inovation}             //option[contains(.,'Inovação')]
 
 *** Test Cases ***
 Validate when inserting valid information, if the card is created in the expected section
-    Given I access the Organo website
-    When I fill in the form with valid information 
-    And I click in the create card button 
+    
+    Given I fill in the form with valid information 
+    When I click in the create card button 
     Then I should be able to see the card in the expected section
 
 *** Keywords ***
-Given I access the Organo website
-    Open Browser      url=http://localhost:3000/    browser=Chrome
 
-When I fill in the form with valid information
+Given I fill in the form with valid information
     Input Text        ${name_field}           Akemi
     Input Text        ${role_field}           Desenvolvedora
     Input Text        ${form_image}           https://picsum.photos/200/300
     Click Element     ${team_select_field}
     Click Element     ${development}
 
-And I click in the create card button
+When I click in the create card button
     Click Element     ${form_button}
 Then I should be able to see the card in the expected section
     Element Should Be Visible    class:colaborador   
