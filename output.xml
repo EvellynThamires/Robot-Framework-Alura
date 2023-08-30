@@ -1,71 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.10.1 on win32)" generated="20230817 22:23:34.760" rpa="false" schemaversion="4">
-<suite id="s1" name="Form Invalid Information" source="C:\Users\xeuye\Documents\Study\Alura\Robot\form_invalid_information.robot">
-<test id="s1-t1" name="Validate if the error message is displayed when the mandatory fields are not filled in" line="11">
+<robot generator="Robot 6.1.1 (Python 3.10.1 on win32)" generated="20230830 20:05:23.594" rpa="false" schemaversion="4">
+<suite id="s1" name="Form Valid Information" source="c:\Users\xeuye\Documents\Study\Alura\Robot\form_valid_information.robot">
+<test id="s1-t1" name="Validate when inserting valid information if the card is created in the expected section" line="25">
 <kw name="Given I access the Organo website" library="setup_teardown" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>url=http://localhost:3000/</arg>
 <arg>browser=Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230817 22:23:35.190" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'.</msg>
-<msg timestamp="20230817 22:23:35.198" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<msg timestamp="20230817 22:23:35.981" level="WARN">Error getting version of chromedriver 115. Retrying with chromedriver 114 (attempt 1/5)</msg>
-<status status="PASS" starttime="20230817 22:23:35.189" endtime="20230817 22:23:37.953"/>
+<msg timestamp="20230830 20:05:25.387" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'.</msg>
+<msg timestamp="20230830 20:05:25.414" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<msg timestamp="20230830 20:05:29.994" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230830 20:05:29.995" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.141 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00BAA813+48355]
+	(No symbol) [0x00B3C4B1]
+	(No symbol) [0x00A45358]
+	(No symbol) [0x00A661AC]
+	(No symbol) [0x00A61EF3]
+	(No symbol) [0x00A60579]
+	(No symbol) [0x00A90C55]
+	(No symbol) [0x00A9093C]
+	(No symbol) [0x00A8A536]
+	(No symbol) [0x00A682DC]
+	(No symbol) [0x00A693DD]
+	GetHandleVerifier [0x00E0AABD+2539405]
+	GetHandleVerifier [0x00E4A78F+2800735]
+	GetHandleVerifier [0x00E4456C+2775612]
+	GetHandleVerifier [0x00C351E0+616112]
+	(No symbol) [0x00B45F8C]
+	(No symbol) [0x00B42328]
+	(No symbol) [0x00B4240B]
+	(No symbol) [0x00B34FF7]
+	BaseThreadInitThunk [0x76747D59+25]
+	RtlInitializeExceptionChain [0x76F2B79B+107]
+	RtlClearBits [0x76F2B71F+191]
+</msg>
+<status status="FAIL" starttime="20230830 20:05:25.387" endtime="20230830 20:05:30.164"/>
 </kw>
-<status status="PASS" starttime="20230817 22:23:35.189" endtime="20230817 22:23:37.953"/>
-</kw>
-<kw name="Given I click on the create card button">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${form_button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230817 22:23:37.956" level="INFO">Clicking element 'id:form-botao'.</msg>
-<status status="PASS" starttime="20230817 22:23:37.955" endtime="20230817 22:23:38.054"/>
-</kw>
-<status status="PASS" starttime="20230817 22:23:37.955" endtime="20230817 22:23:38.054"/>
-</kw>
-<kw name="Then I should see an error message">
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>id:form-nome-erro</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230817 22:23:38.161" level="INFO">Element 'id:form-nome-erro' is displayed.</msg>
-<status status="PASS" starttime="20230817 22:23:38.055" endtime="20230817 22:23:38.161"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>id:form-cargo-erro</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230817 22:23:38.184" level="INFO">Element 'id:form-cargo-erro' is displayed.</msg>
-<status status="PASS" starttime="20230817 22:23:38.161" endtime="20230817 22:23:38.184"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>id:form-times-erro</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230817 22:23:38.205" level="INFO">Element 'id:form-times-erro' is displayed.</msg>
-<status status="PASS" starttime="20230817 22:23:38.184" endtime="20230817 22:23:38.205"/>
-</kw>
-<status status="PASS" starttime="20230817 22:23:38.055" endtime="20230817 22:23:38.205"/>
+<status status="FAIL" starttime="20230830 20:05:25.387" endtime="20230830 20:05:30.164"/>
 </kw>
 <kw name="Close the Browser" library="setup_teardown" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230817 22:23:38.206" endtime="20230817 22:23:40.304"/>
+<status status="PASS" starttime="20230830 20:05:30.166" endtime="20230830 20:05:30.167"/>
 </kw>
-<status status="PASS" starttime="20230817 22:23:38.205" endtime="20230817 22:23:40.305"/>
+<status status="PASS" starttime="20230830 20:05:30.164" endtime="20230830 20:05:30.167"/>
 </kw>
-<status status="PASS" starttime="20230817 22:23:35.188" endtime="20230817 22:23:40.306"/>
+<status status="FAIL" starttime="20230830 20:05:25.384" endtime="20230830 20:05:30.167">Setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.141 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00BAA813+48355]
+	(No symbol) [0x00B3C4B1]
+	(No symbol) [0x00A45358]
+	(No symbol) [0x00A661AC]
+	(No symbol) [0x00A61EF3]
+	(No symbol) [0x00A60579]
+	(No symbol) [0x00A90C55]
+	(No symbol) [0x00A9093C]
+	(No symbol) [0x00A8A536]
+	(No symbol) [0x00A682DC]
+	(No symbol) [0x00A693DD]
+	GetHandleVerifier [0x00E0AABD+2539405]
+	GetHandleVerifier [0x00E4A78F+2800735]
+	GetHandleVerifier [0x00E4456C+2775612]
+	GetHandleVerifier [0x00C351E0+616112]
+	(No symbol) [0x00B45F8C]
+	(No symbol) [0x00B42328]
+	(No symbol) [0x00B4240B]
+	(No symbol) [0x00B34FF7]
+	BaseThreadInitThunk [0x76747D59+25]
+	RtlInitializeExceptionChain [0x76F2B79B+107]
+	RtlClearBits [0x76F2B71F+191]
+</status>
 </test>
-<status status="PASS" starttime="20230817 22:23:34.762" endtime="20230817 22:23:40.311"/>
+<status status="FAIL" starttime="20230830 20:05:23.606" endtime="20230830 20:05:30.179"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Form Invalid Information">Form Invalid Information</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Form Valid Information">Form Valid Information</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230817 22:23:35.981" level="WARN">Error getting version of chromedriver 115. Retrying with chromedriver 114 (attempt 1/5)</msg>
 </errors>
 </robot>
