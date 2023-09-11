@@ -1,9 +1,5 @@
 *** Settings ***
-Library           SeleniumLibrary
-Library           FakerLibrary                        locale=pt_BR
-Resource          setup_teardown.robot
-Test Setup        Given I access the Organo website
-Test Teardown     Close the Browser
+Resource    ../main.robot
 
 *** Variables ***
 ${name_field}            id:form-nome
@@ -21,24 +17,7 @@ ${form_button}           id:form-botao
 ...                      //option[contains(.,'Mobile')]
 ...                      //option[contains(.,'Inovação')]
 
-*** Test Cases ***
-Validate when inserting valid information if the card is created in the expected section
-    
-    Given I fill in the form with valid information 
-    When I click in the create card button 
-    Then I should be able to see the card in the expected section
-
-Validate creating more than one card 
-    Given I fill in the form with valid information 
-    When I click in the create card button 
-    Then it should create three cards in the correct team
-
-Validate when creating cards in different teams
-    Given I fill in the form with valid information 
-    Then it should create a card on a team
-
 *** Keywords ***
-
 Given I fill in the form with valid information
     ${name}           FakerLibrary.First Name
     ${role}           FakerLibrary.Job
@@ -49,6 +28,9 @@ Given I fill in the form with valid information
     Input Text        ${form_image}           ${image}
     Click Element     ${team_select_field}
     Click Element     ${select_team}[0]
+
+Given I click on the create card button 
+    Click Element     ${form_button}
 
 When I click in the create card button
     Click Element     ${form_button}
@@ -67,3 +49,8 @@ Then it should create a card on a team
         Click Element  ${team}
         When I click in the create card button
     END
+
+Then I should see an error message
+    Element Should Be Visible    id:form-nome-erro 
+    Element Should Be Visible    id:form-cargo-erro 
+    Element Should Be Visible    id:form-times-erro

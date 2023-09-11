@@ -1,92 +1,244 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.10.1 on win32)" generated="20230830 20:05:23.594" rpa="false" schemaversion="4">
-<suite id="s1" name="Form Valid Information" source="c:\Users\xeuye\Documents\Study\Alura\Robot\form_valid_information.robot">
+<robot generator="Robot 6.1.1 (Python 3.10.1 on win32)" generated="20230911 20:14:43.827" rpa="false" schemaversion="4">
+<suite id="s1" name="Form Valid Information" source="C:\Users\xeuye\Documents\Study\Alura\Robot\form_valid_information.robot">
 <test id="s1-t1" name="Validate when inserting valid information if the card is created in the expected section" line="25">
 <kw name="Given I access the Organo website" library="setup_teardown" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>url=http://localhost:3000/</arg>
 <arg>browser=Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230830 20:05:25.387" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'.</msg>
-<msg timestamp="20230830 20:05:25.414" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<msg timestamp="20230830 20:05:29.994" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<msg timestamp="20230830 20:05:29.995" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
-Current browser version is 116.0.5845.141 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+<msg timestamp="20230911 20:14:44.480" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'.</msg>
+<msg timestamp="20230911 20:14:44.490" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<msg timestamp="20230911 20:14:48.587" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230911 20:14:48.587" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.180 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
 Stacktrace:
 Backtrace:
-	GetHandleVerifier [0x00BAA813+48355]
-	(No symbol) [0x00B3C4B1]
-	(No symbol) [0x00A45358]
-	(No symbol) [0x00A661AC]
-	(No symbol) [0x00A61EF3]
-	(No symbol) [0x00A60579]
-	(No symbol) [0x00A90C55]
-	(No symbol) [0x00A9093C]
-	(No symbol) [0x00A8A536]
-	(No symbol) [0x00A682DC]
-	(No symbol) [0x00A693DD]
-	GetHandleVerifier [0x00E0AABD+2539405]
-	GetHandleVerifier [0x00E4A78F+2800735]
-	GetHandleVerifier [0x00E4456C+2775612]
-	GetHandleVerifier [0x00C351E0+616112]
-	(No symbol) [0x00B45F8C]
-	(No symbol) [0x00B42328]
-	(No symbol) [0x00B4240B]
-	(No symbol) [0x00B34FF7]
-	BaseThreadInitThunk [0x76747D59+25]
-	RtlInitializeExceptionChain [0x76F2B79B+107]
-	RtlClearBits [0x76F2B71F+191]
+	GetHandleVerifier [0x0054A813+48355]
+	(No symbol) [0x004DC4B1]
+	(No symbol) [0x003E5358]
+	(No symbol) [0x004061AC]
+	(No symbol) [0x00401EF3]
+	(No symbol) [0x00400579]
+	(No symbol) [0x00430C55]
+	(No symbol) [0x0043093C]
+	(No symbol) [0x0042A536]
+	(No symbol) [0x004082DC]
+	(No symbol) [0x004093DD]
+	GetHandleVerifier [0x007AAABD+2539405]
+	GetHandleVerifier [0x007EA78F+2800735]
+	GetHandleVerifier [0x007E456C+2775612]
+	GetHandleVerifier [0x005D51E0+616112]
+	(No symbol) [0x004E5F8C]
+	(No symbol) [0x004E2328]
+	(No symbol) [0x004E240B]
+	(No symbol) [0x004D4FF7]
+	BaseThreadInitThunk [0x75B37D59+25]
+	RtlInitializeExceptionChain [0x771EB79B+107]
+	RtlClearBits [0x771EB71F+191]
 </msg>
-<status status="FAIL" starttime="20230830 20:05:25.387" endtime="20230830 20:05:30.164"/>
+<status status="FAIL" starttime="20230911 20:14:44.479" endtime="20230911 20:14:48.590"/>
 </kw>
-<status status="FAIL" starttime="20230830 20:05:25.387" endtime="20230830 20:05:30.164"/>
+<status status="FAIL" starttime="20230911 20:14:44.479" endtime="20230911 20:14:48.591"/>
 </kw>
 <kw name="Close the Browser" library="setup_teardown" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230830 20:05:30.166" endtime="20230830 20:05:30.167"/>
+<status status="PASS" starttime="20230911 20:14:48.592" endtime="20230911 20:14:48.592"/>
 </kw>
-<status status="PASS" starttime="20230830 20:05:30.164" endtime="20230830 20:05:30.167"/>
+<status status="PASS" starttime="20230911 20:14:48.591" endtime="20230911 20:14:48.592"/>
 </kw>
-<status status="FAIL" starttime="20230830 20:05:25.384" endtime="20230830 20:05:30.167">Setup failed:
+<status status="FAIL" starttime="20230911 20:14:44.478" endtime="20230911 20:14:48.592">Setup failed:
 SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
-Current browser version is 116.0.5845.141 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Current browser version is 116.0.5845.180 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
 Stacktrace:
 Backtrace:
-	GetHandleVerifier [0x00BAA813+48355]
-	(No symbol) [0x00B3C4B1]
-	(No symbol) [0x00A45358]
-	(No symbol) [0x00A661AC]
-	(No symbol) [0x00A61EF3]
-	(No symbol) [0x00A60579]
-	(No symbol) [0x00A90C55]
-	(No symbol) [0x00A9093C]
-	(No symbol) [0x00A8A536]
-	(No symbol) [0x00A682DC]
-	(No symbol) [0x00A693DD]
-	GetHandleVerifier [0x00E0AABD+2539405]
-	GetHandleVerifier [0x00E4A78F+2800735]
-	GetHandleVerifier [0x00E4456C+2775612]
-	GetHandleVerifier [0x00C351E0+616112]
-	(No symbol) [0x00B45F8C]
-	(No symbol) [0x00B42328]
-	(No symbol) [0x00B4240B]
-	(No symbol) [0x00B34FF7]
-	BaseThreadInitThunk [0x76747D59+25]
-	RtlInitializeExceptionChain [0x76F2B79B+107]
-	RtlClearBits [0x76F2B71F+191]
+	GetHandleVerifier [0x0054A813+48355]
+	(No symbol) [0x004DC4B1]
+	(No symbol) [0x003E5358]
+	(No symbol) [0x004061AC]
+	(No symbol) [0x00401EF3]
+	(No symbol) [0x00400579]
+	(No symbol) [0x00430C55]
+	(No symbol) [0x0043093C]
+	(No symbol) [0x0042A536]
+	(No symbol) [0x004082DC]
+	(No symbol) [0x004093DD]
+	GetHandleVerifier [0x007AAABD+2539405]
+	GetHandleVerifier [0x007EA78F+2800735]
+	GetHandleVerifier [0x007E456C+2775612]
+	GetHandleVerifier [0x005D51E0+616112]
+	(No symbol) [0x004E5F8C]
+	(No symbol) [0x004E2328]
+	(No symbol) [0x004E240B]
+	(No symbol) [0x004D4FF7]
+	BaseThreadInitThunk [0x75B37D59+25]
+	RtlInitializeExceptionChain [0x771EB79B+107]
+	RtlClearBits [0x771EB71F+191]
 </status>
 </test>
-<status status="FAIL" starttime="20230830 20:05:23.606" endtime="20230830 20:05:30.179"/>
+<test id="s1-t2" name="Validate creating more than one card" line="31">
+<kw name="Given I access the Organo website" library="setup_teardown" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=http://localhost:3000/</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230911 20:14:48.597" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'.</msg>
+<msg timestamp="20230911 20:14:48.605" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<msg timestamp="20230911 20:14:51.915" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230911 20:14:51.915" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.180 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x0054A813+48355]
+	(No symbol) [0x004DC4B1]
+	(No symbol) [0x003E5358]
+	(No symbol) [0x004061AC]
+	(No symbol) [0x00401EF3]
+	(No symbol) [0x00400579]
+	(No symbol) [0x00430C55]
+	(No symbol) [0x0043093C]
+	(No symbol) [0x0042A536]
+	(No symbol) [0x004082DC]
+	(No symbol) [0x004093DD]
+	GetHandleVerifier [0x007AAABD+2539405]
+	GetHandleVerifier [0x007EA78F+2800735]
+	GetHandleVerifier [0x007E456C+2775612]
+	GetHandleVerifier [0x005D51E0+616112]
+	(No symbol) [0x004E5F8C]
+	(No symbol) [0x004E2328]
+	(No symbol) [0x004E240B]
+	(No symbol) [0x004D4FF7]
+	BaseThreadInitThunk [0x75B37D59+25]
+	RtlInitializeExceptionChain [0x771EB79B+107]
+	RtlClearBits [0x771EB71F+191]
+</msg>
+<status status="FAIL" starttime="20230911 20:14:48.596" endtime="20230911 20:14:51.916"/>
+</kw>
+<status status="FAIL" starttime="20230911 20:14:48.596" endtime="20230911 20:14:51.916"/>
+</kw>
+<kw name="Close the Browser" library="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230911 20:14:51.916" endtime="20230911 20:14:51.916"/>
+</kw>
+<status status="PASS" starttime="20230911 20:14:51.916" endtime="20230911 20:14:51.917"/>
+</kw>
+<status status="FAIL" starttime="20230911 20:14:48.595" endtime="20230911 20:14:51.918">Setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.180 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x0054A813+48355]
+	(No symbol) [0x004DC4B1]
+	(No symbol) [0x003E5358]
+	(No symbol) [0x004061AC]
+	(No symbol) [0x00401EF3]
+	(No symbol) [0x00400579]
+	(No symbol) [0x00430C55]
+	(No symbol) [0x0043093C]
+	(No symbol) [0x0042A536]
+	(No symbol) [0x004082DC]
+	(No symbol) [0x004093DD]
+	GetHandleVerifier [0x007AAABD+2539405]
+	GetHandleVerifier [0x007EA78F+2800735]
+	GetHandleVerifier [0x007E456C+2775612]
+	GetHandleVerifier [0x005D51E0+616112]
+	(No symbol) [0x004E5F8C]
+	(No symbol) [0x004E2328]
+	(No symbol) [0x004E240B]
+	(No symbol) [0x004D4FF7]
+	BaseThreadInitThunk [0x75B37D59+25]
+	RtlInitializeExceptionChain [0x771EB79B+107]
+	RtlClearBits [0x771EB71F+191]
+</status>
+</test>
+<test id="s1-t3" name="Validate when creating cards in different teams" line="36">
+<kw name="Given I access the Organo website" library="setup_teardown" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=http://localhost:3000/</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230911 20:14:51.923" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'.</msg>
+<msg timestamp="20230911 20:14:51.931" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<msg timestamp="20230911 20:14:59.451" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230911 20:14:59.452" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.180 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x0054A813+48355]
+	(No symbol) [0x004DC4B1]
+	(No symbol) [0x003E5358]
+	(No symbol) [0x004061AC]
+	(No symbol) [0x00401EF3]
+	(No symbol) [0x00400579]
+	(No symbol) [0x00430C55]
+	(No symbol) [0x0043093C]
+	(No symbol) [0x0042A536]
+	(No symbol) [0x004082DC]
+	(No symbol) [0x004093DD]
+	GetHandleVerifier [0x007AAABD+2539405]
+	GetHandleVerifier [0x007EA78F+2800735]
+	GetHandleVerifier [0x007E456C+2775612]
+	GetHandleVerifier [0x005D51E0+616112]
+	(No symbol) [0x004E5F8C]
+	(No symbol) [0x004E2328]
+	(No symbol) [0x004E240B]
+	(No symbol) [0x004D4FF7]
+	BaseThreadInitThunk [0x75B37D59+25]
+	RtlInitializeExceptionChain [0x771EB79B+107]
+	RtlClearBits [0x771EB71F+191]
+</msg>
+<status status="FAIL" starttime="20230911 20:14:51.922" endtime="20230911 20:14:59.455"/>
+</kw>
+<status status="FAIL" starttime="20230911 20:14:51.922" endtime="20230911 20:14:59.455"/>
+</kw>
+<kw name="Close the Browser" library="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230911 20:14:59.459" endtime="20230911 20:14:59.459"/>
+</kw>
+<status status="PASS" starttime="20230911 20:14:59.457" endtime="20230911 20:14:59.459"/>
+</kw>
+<status status="FAIL" starttime="20230911 20:14:51.922" endtime="20230911 20:14:59.460">Setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.180 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x0054A813+48355]
+	(No symbol) [0x004DC4B1]
+	(No symbol) [0x003E5358]
+	(No symbol) [0x004061AC]
+	(No symbol) [0x00401EF3]
+	(No symbol) [0x00400579]
+	(No symbol) [0x00430C55]
+	(No symbol) [0x0043093C]
+	(No symbol) [0x0042A536]
+	(No symbol) [0x004082DC]
+	(No symbol) [0x004093DD]
+	GetHandleVerifier [0x007AAABD+2539405]
+	GetHandleVerifier [0x007EA78F+2800735]
+	GetHandleVerifier [0x007E456C+2775612]
+	GetHandleVerifier [0x005D51E0+616112]
+	(No symbol) [0x004E5F8C]
+	(No symbol) [0x004E2328]
+	(No symbol) [0x004E240B]
+	(No symbol) [0x004D4FF7]
+	BaseThreadInitThunk [0x75B37D59+25]
+	RtlInitializeExceptionChain [0x771EB79B+107]
+	RtlClearBits [0x771EB71F+191]
+</status>
+</test>
+<status status="FAIL" starttime="20230911 20:14:43.829" endtime="20230911 20:14:59.471"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Form Valid Information">Form Valid Information</stat>
+<stat pass="0" fail="3" skip="0" id="s1" name="Form Valid Information">Form Valid Information</stat>
 </suite>
 </statistics>
 <errors>
